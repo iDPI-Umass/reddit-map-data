@@ -2,11 +2,11 @@ name: publish
 on: 
   push:
     branches:
-      - deploy
+      - publish
 
 jobs:
   publish:
-    name: Build and Publish RedditMap
+    name: Sync RedditMap Data
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,10 +17,8 @@ jobs:
           node-version: 18
       - name: Install Dependencies
         run: npm install
-      - name: Build Site
-        run: npx gulp build
-      - name: Publish Site
-        run: npx gulp publish --environment=production-www
+      - name: Sync Data
+        run: npx gulp publish --environment=production-data
         env:
           AWS_ACCESS_KEY_ID: AKIAVLPQTNXLIINXCGOO
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET }}
