@@ -25,9 +25,15 @@ const publish = async function () {
   }
 };
 
+const wipePrivate = async function () {
+  await Task.Custom.wipePrivateTree(); 
+};
+
 
 export {
   deploy,
   teardown,
-  publish
+  publish,
+
+  wipePrivate
 }
