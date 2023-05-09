@@ -23,6 +23,11 @@ const check = async function () {
   return config;
 };
 
+const getArgs = function () {
+  return args;
+}
+
 export {
-  check
+  check,
+  getArgs
 }

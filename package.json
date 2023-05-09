@@ -15,6 +15,5 @@
     "progress": "^2.0.3",
     "prompts": "^2.4.2",
     "yargs": "^17.7.1"
-  },
-  "dependencies": {}
+  }
 }
