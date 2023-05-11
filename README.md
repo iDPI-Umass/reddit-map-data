@@ -1,9 +1,11 @@
 # reddit-map-data
-Repository for Data Backing the RedditMap Project
+Data for the Reddit Map Project
 
 ## Background
 
-RedditMap is a project of computer, data, and social scientists to explore and visualize Reddit as a space. The site running the visualizations is available at https://redditmap.social. But the data that backs that site is stored here.
+Reddit Map is a project of computer, data, and social scientists to explore and visualize Reddit. The website running the visualizations is available at https://redditmap.social. The data for the project is here. 
+
+Reddit Map is a collaboration between the [Initiative for Digital Public Infrastructure](https://publicinfrastructure.org) (iDPI), [Media Cloud](https://www.mediacloud.org), and the UMass Amherst [Center for Data Science](https://ds.cs.umass.edu).
 
 ## Main Tasks
 
