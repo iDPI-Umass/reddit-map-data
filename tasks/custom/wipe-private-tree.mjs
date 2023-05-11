@@ -2,12 +2,12 @@ import FS from "node:fs/promises";
 import { getArgs } from "../environment.mjs";
 
 const getTree = async function ( name ) {
-  const path = `data/RC_${ name }_KMeans_Agglom_100_Clusters_Rules_Mapping.json`;
+  const path = `data/RC_${ name }.json`;
   return JSON.parse( await FS.readFile( path, { encoding: "utf8" }) );
 };
 
 const putTree = async function ( name, data ) {
-  const path = `data/RC_${ name }_KMeans_Agglom_100_Clusters_Rules_Mapping.json`;
+  const path = `data/RC_${ name }.json`;
   await FS.writeFile( path, JSON.stringify(data) );
 };
 
