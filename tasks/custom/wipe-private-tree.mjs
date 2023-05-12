@@ -1,6 +1,8 @@
 import FS from "node:fs/promises";
 import { getArgs } from "../environment.mjs";
 
+let count = 0;
+
 const getTree = async function ( name ) {
   const path = `data/RC_${ name }.json`;
   return JSON.parse( await FS.readFile( path, { encoding: "utf8" }) );
@@ -30,6 +32,8 @@ const _wipe = async function ( node ) {
         node.isPrivate = true;
       }
     } catch (error) {
+      // console.log(node.subreddit);
+      count++;
     }
   }
 }
@@ -45,6 +49,7 @@ const wipePrivateTree = async function () {
   const tree = await getTree( month );
   await wipe( tree );
   await putTree( month, tree );
+  console.log( "number of unknown subreddits:", count );
 }
 
 
